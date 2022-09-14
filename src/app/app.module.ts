@@ -9,6 +9,10 @@ import { MainlayoutComponent } from './mainlayout/mainlayout.component';
 import { PlainlayoutComponent } from './plainlayout/plainlayout.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {FormsModule} from "@angular/forms";
+import { FilterPipe } from './filter.pipe';
+import { DataComponent } from './data/data.component';
+import { DatatableComponent } from './datatable/datatable.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,14 +20,18 @@ import {FormsModule} from "@angular/forms";
     HomeComponent,
     AboutComponent,
     MainlayoutComponent,
-    PlainlayoutComponent
+    PlainlayoutComponent,
+    FilterPipe,
+    DataComponent,
+    DatatableComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   
   providers: [],

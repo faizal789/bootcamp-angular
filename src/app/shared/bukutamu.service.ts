@@ -10,7 +10,7 @@ export class BukutamuService {
   }
 
   simpanBuku(bukuTamu: BukuTamu): string {
-    console.log(`${bukuTamu.nama} : ${bukuTamu.alamat}:${bukuTamu.email} :${bukuTamu.nomorTelp}`)
+    console.log(bukuTamu)
     return "Sukses"
   }
 }

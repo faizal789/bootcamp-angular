@@ -5,10 +5,10 @@
       <label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" formControlName = 'nama'>
-        <span class="pesan-error" *ngIf="!formKontak.get('nama')?.valid && formKontak.get('nama')?.touched">
-            <span class="pesan-error" *ngIf="formKontak.get('nama')?.errors?.['minLength']" >Panjang nama tidak kurang dari tiga</span>
+        <span class="pesan-error" *ngIf="!formKontak.get('nama')?.valid && formKontak.get('nama')?.touched">     
           <span class="pesan-error" *ngIf="formKontak.get('nama')?.errors?.['required']" >Nama Wajib di isi</span>
-            </span>
+          <span class="pesan-error" *ngIf="formKontak.get('nama')?.hasError('minlength')" >panjang nama minimal 3</span>
+        </span> 
       </div>
     </div>
     <div class="row mb-3">
@@ -33,10 +33,48 @@
         <label  class="col-sm-2 col-form-label">Nomor Telp</label>
         <div class="col-sm-10">
           <input type="number" class="form-control" formControlName = 'nomorTelp'>
-          <span class="pesan-error" *ngIf="!formKontak.get('nomorTelp')?.valid && formKontak.get('nomorTelp')?.touched">Wajib di isi</span>
+          <span class="pesan-error" *ngIf="!formKontak.get('nomorTelp')?.valid && formKontak.get('nomorTelp')?.touched">
+            <span class="pesan-error" *ngIf="formKontak.get('nomorTelp')?.errors?.['required']" >nomor telepon Wajib di isi</span>
+          </span>
         </div>
       </div>
-
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" formControlName = "radio" id="gridRadios1" value="1" checked>
+            <label class="form-check-label" for="gridRadios1">
+              First radio
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" formControlName = "radio" id="gridRadios2" value="2">
+            <label class="form-check-label" for="gridRadios2">
+              Second radio
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <div class="row mb-3">
+        <div class="col-sm-10 offset-sm-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" (change)="getVal($event)" formArrayName = 'checkbox'>
+            <label class="form-check-label">
+              First Radio
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-sm-10 offset-sm-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="2" (change)="getVal($event)" formArrayName = 'checkbox'>
+            <label class="form-check-label">
+              Second Radio
+            </label>
+          </div>
+        </div>
+      </div> 
     <button type="submit" (click)="simpanForm()" class="btn btn-primary">Submit</button>
    
   </form>

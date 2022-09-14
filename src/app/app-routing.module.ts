@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { AuthGuard } from './auth/auth.guard';
+import { DataComponent } from './data/data.component';
+import { DatatableComponent } from './datatable/datatable.component';
 import { HomeComponent } from './home/home.component';
 import { MainlayoutComponent } from './mainlayout/mainlayout.component';
 import { PlainlayoutComponent } from './plainlayout/plainlayout.component';
@@ -10,6 +13,10 @@ const routes: Routes = [
   component :MainlayoutComponent, path : 'apps',children:[
     {
         component :HomeComponent, path : 'home', title : "Home"
+    },
+    {
+        component :DataComponent, path : 'data',
+        canActivate:[AuthGuard] ,title : "data"
     }
   ]
 },
@@ -19,7 +26,11 @@ const routes: Routes = [
       component :AboutComponent ,path : 'about', title : "About"
     },
   ]
-}];
+},
+{
+  component :DatatableComponent, path : 'datatable', 
+}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-mainlayout',
@@ -7,13 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainlayoutComponent implements OnInit {
 
-  constructor() { }
+  isLogin: boolean = false;
+
+  constructor(private authService: AuthService) { }
   tampilHilang: string = "display:none;";
 
   ngOnInit(): void {
+    this.getAuth();
   }
 
-
+  getAuth() {
+    this.isLogin = this.authService.isAuthenticated()
+  }
   bukaTutup(): void {
     const sidebarToggle = document.body.querySelector("#sidebarToggle")
     if (sidebarToggle) {
@@ -39,5 +45,19 @@ export class MainlayoutComponent implements OnInit {
       }
     }
   }
+
+  login() {
+    console.log(`before login : ${this.isLogin}`)
+    this.authService.login();
+    this.getAuth()
+    console.log(`after login : ${this.isLogin}`)
+  }
+
+  logout() {
+    this.authService.logout();
+    this.getAuth()
+
+  }
+
 
 }
