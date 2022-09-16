@@ -7,6 +7,8 @@ import { DatatableComponent } from './datatable/datatable.component';
 import { HomeComponent } from './home/home.component';
 import { MainlayoutComponent } from './mainlayout/mainlayout.component';
 import { PlainlayoutComponent } from './plainlayout/plainlayout.component';
+import { ProdukComponent } from './produk/produk.component';
+import { ProdukkategoriComponent } from './produkkategori/produkkategori.component';
 
 const routes: Routes = [
 {
@@ -25,6 +27,12 @@ const routes: Routes = [
     {
       component :AboutComponent ,path : 'about', title : "About"
     },
+    {
+      component :ProdukComponent ,path : 'produk', title : "produk"
+    },
+    {
+      component :ProdukkategoriComponent ,path : 'produkkategori', title : "produk dan kategori"
+    }
   ]
 },
 {

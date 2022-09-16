@@ -13,6 +13,8 @@ import { FilterPipe } from './filter.pipe';
 import { DataComponent } from './data/data.component';
 import { DatatableComponent } from './datatable/datatable.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProdukComponent } from './produk/produk.component';
+import { ProdukkategoriComponent } from './produkkategori/produkkategori.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
     PlainlayoutComponent,
     FilterPipe,
     DataComponent,
-    DatatableComponent
+    DatatableComponent,
+    ProdukComponent,
+    ProdukkategoriComponent
   ],
 
   imports: [

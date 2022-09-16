@@ -1,0 +1,22 @@
+<p></p>
+
+<div class="row">
+    <table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAMA</th>
+            <th>DEPT ID</th>
+            <th>KET</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let lk of listKategori">
+            <td>{{lk.katId}}</td>
+            <td>{{lk.name}}</td>
+            <td>{{lk.deptId}}</td>
+            <td>{{lk.ket}}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>

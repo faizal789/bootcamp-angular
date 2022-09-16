@@ -1,0 +1,20 @@
+
+<div class="row">
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>NAMA PRODUK</th>
+            <th>ID KATEGORI</th>
+            <th>NAMA KATEGORI</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let lp of listProduk">
+            <td>{{lp.nama}}</td>
+            <td>{{lp.katId}}</td>
+            <td>{{lp.nameKategori}}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
