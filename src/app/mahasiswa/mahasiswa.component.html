@@ -1,5 +1,6 @@
+<div class="container p-5">
 <input class="form-control w-25 mt-5" type="text" placeholder="nama" [(ngModel)]="searchValue">
-<table class="table">
+<table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -9,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let std of student|filter : searchValue; index as i">
+      <tr *ngFor="let std of student|filter : searchValue ; index as i">
         <th scope="row">{{i + 1}}</th>
         <td>{{std.nama | uppercase}}</td>
         <td>{{std.jurusan}}</td>
@@ -17,6 +18,7 @@
       </tr>
     </tbody>
   </table>       
+</div>
        <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
@@ -47,3 +49,4 @@
                 </footer>
             </div>
         </div>
+

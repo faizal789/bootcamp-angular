@@ -10,11 +10,13 @@ import { PlainlayoutComponent } from './plainlayout/plainlayout.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {FormsModule} from "@angular/forms";
 import { FilterPipe } from './filter.pipe';
-import { DataComponent } from './data/data.component';
 import { DatatableComponent } from './datatable/datatable.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProdukComponent } from './produk/produk.component';
 import { ProdukkategoriComponent } from './produkkategori/produkkategori.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FormComponent } from './produk/form/form.component';
+import { MahasiswaComponent } from './mahasiswa/mahasiswa.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +26,11 @@ import { ProdukkategoriComponent } from './produkkategori/produkkategori.compone
     MainlayoutComponent,
     PlainlayoutComponent,
     FilterPipe,
-    DataComponent,
     DatatableComponent,
     ProdukComponent,
-    ProdukkategoriComponent
+    ProdukkategoriComponent,
+    FormComponent,
+    MahasiswaComponent
   ],
 
   imports: [
@@ -35,7 +38,8 @@ import { ProdukkategoriComponent } from './produkkategori/produkkategori.compone
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
   ],
   
   providers: [],

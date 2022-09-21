@@ -18,7 +18,7 @@ export class AuthGuard implements CanActivate {
     if (this.authService.isAuthenticated()) {
       return true;
     } else {
-      alert('tidak dapat mengakses menu data')
+      alert('tidak dapat mengakses menu mahasiswa')
       return false;
     }
   }

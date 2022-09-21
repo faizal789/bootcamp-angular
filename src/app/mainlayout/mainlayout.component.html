@@ -1,14 +1,14 @@
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a  class="navbar-brand ps-3" >Start Bootstrap</a>
-            <a  class="nav-item" routerLink="/apps/home" >Home</a>
-            <a  class="nav-item ms-3" routerLink="/apps/data">Data</a>
-            <button type="button" *ngIf="!isLogin" (click)="login()">Login</button>
-            <button type="button" *ngIf="isLogin" (click)="logout()">Logout</button>
+       
             <!-- Sidebar Toggle-->
             <button (click)="bukaTutup()" class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
-         
+            <a  class="list-item text-white ms-5" routerLink="/apps/home" >Home</a>
+            <a  class="list-item text-white ms-3" routerLink="/apps/mahasiswa">Mahasiswa</a>  
+            <a  class="list-item text-white ms-3" routerLink="/apps/produk" >Produk</a>
+            <a  class="list-item text-white ms-3" routerLink="/apps/produkkategori" >Kategori</a>
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
@@ -23,7 +23,8 @@
                         <li><a class="dropdown-item" href="#!">Settings</a></li>
                         <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><button class="btn btn-primary ms-3" type="button" *ngIf="!isLogin" (click)="login()">Login</button>
+                            <button class="btn btn-secondary ms-3" type="button" *ngIf="isLogin" (click)="logout()">Logout</button></li>
                     </ul>
                 </li>
             </ul>

@@ -13,3 +13,9 @@ export class Produk{
 	nama     !: string
 	nameKategori !: string
 }
+
+export class Department{
+    deptId !: number 
+	nama !: string
+	ket !: string
+}

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Student } from '../plainlayout/student';
+import { Student } from './student';
 
 @Component({
-  selector: 'app-data',
-  templateUrl: './data.component.html',
-  styleUrls: ['./data.component.css']
+  selector: 'app-mahasiswa',
+  templateUrl: './mahasiswa.component.html',
+  styleUrls: ['./mahasiswa.component.css']
 })
-export class DataComponent implements OnInit {
+export class MahasiswaComponent implements OnInit {
   student !: Student[];
   searchValue : string = '';
   
@@ -30,5 +30,6 @@ export class DataComponent implements OnInit {
           nilai : 80
         }
       ]
-    }  
+    }
+
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Student } from './student';
+import { Student } from '../mahasiswa/student';
 
 @Component({
   selector: 'app-plainlayout',
@@ -7,29 +7,9 @@ import { Student } from './student';
   styleUrls: ['./plainlayout.component.css']
 })
 export class PlainlayoutComponent implements OnInit {
-student !: Student[];
-searchValue : string = '';
-
-  constructor() { }
 
   ngOnInit(): void {
-    this.student = [
-      {
-        nama : "Faizal",
-        jurusan : "Sistem Informasi",
-        nilai : 70
-      },
-      {
-        nama : "Rafli",
-        jurusan : "Teknik",
-        nilai : 60
-      },
-      {
-        nama : "Felix",
-        jurusan : "Informatika",
-        nilai : 80
-      }
-    ]
-  }
 
+    
+  }
 }
